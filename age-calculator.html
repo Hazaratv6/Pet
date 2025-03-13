@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your pet's exact age in years, months, days, and hours. Perfect for dog, cat, and bird owners!">
+    <meta name="keywords" content="pet age calculator, dog age calculator, cat age calculator, bird age calculator, pet birthday">
+    <meta name="author" content="Mera-Pet">
+    <title>Pet Age Calculator - Know Your Pet's Exact Age</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_SENSE_ID" crossorigin="anonymous"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        main {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .calculator {
+            text-align: center;
+        }
+
+        .calculator h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        input, select, button {
+            margin-bottom: 16px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, button:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #ageResult {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: yellow; /* Changed to yellow */
+        }
+
+        .advertisement {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .ad-container {
+            margin: 20px auto;
+            max-width: 728px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .calculator h2 {
+                font-size: 1.5rem;
+            }
+
+            input, select, button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            #ageResult {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Age Calculator</h1>
+        <p>Find out your pet's exact age in years, months, days, and hours!</p>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <h2>Calculate Your Pet's Age</h2>
+            <form id="petAgeForm">
+                <label for="petType">Pet Type:</label>
+                <select id="petType" name="petType">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="birthDate">Pet's Birth Date:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+
+                <button type="submit">Calculate Age</button>
+            </form>
+
+            <div id="result">
+                <h3>Your Pet's Age:</h3>
+                <p id="ageResult"></p>
+            </div>
+        </section>
+
+        <!-- Advertisement Section -->
+        <section class="advertisement">
+            <h2>Support Us</h2>
+            <div class="ad-container">
+                <!-- Google AdSense Ad Unit -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_AD_SENSE_ID"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pet Age Calculator. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Age Calculation
+        document.getElementById('petAgeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const birthDate = new Date(document.getElementById('birthDate').value);
+            const currentDate = new Date();
+            const ageInMilliseconds = currentDate - birthDate;
+
+            const years = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365));
+            const months = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+            const days = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            const result = `Your pet is ${years} years, ${months} months, ${days} days, and ${hours} hours old.`;
+            document.getElementById('ageResult').textContent = result;
+        });
+    </script>
+</body>
+</html>
