@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a variety of pet companion calculators to help you care for your pets. Calculate pet age, food requirements, and more!">
+    <meta name="keywords" content="pet calculators, pet age calculator, pet food calculator, pet care tools">
+    <meta name="author" content="Your Name">
+    <title>Pet Companion Tools - Calculators for Pet Lovers</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #45a049;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tool-card i {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .tool-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pet Companion Tools</h1>
+        <p>Your one-stop destination for all pet-related calculators!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Pet Companion Tools</h2>
+        <p>Discover a variety of calculators to help you care for your pets.</p>
+        <button>Explore Tools</button>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="tools-grid" id="tools">
+        <a href="/Pet/age-calculator.html"> <!-- Link to Pet Age Calculator -->
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Pet Age Calculator</h3>
+            <p>Calculate your pet's exact age in years, months, and days.</p>
+        </div>
+    </a>
+        <div class="tool-card">
+            <i class="fas fa-bone"></i>
+            <h3>Pet Food Calculator</h3>
+            <p>Determine the right amount of food for your pet.</p>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-weight"></i>
+            <h3>Pet Weight Tracker</h3>
+            <p>Track your pet's weight and growth over time.</p>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Pet Health Calculator</h3>
+            <p>Monitor your pet's health and fitness levels.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Pet Companion Tools. All rights reserved.</p>
+    </footer>
+</body>
+</html>
